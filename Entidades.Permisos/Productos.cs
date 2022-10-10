@@ -8,17 +8,19 @@ namespace Entidades.Permisos
 {
     public class Productos
     {
-        public Productos(int codigobarras, string nombre, string descripcion, string marca)
+        public Productos(string codigoBarras, string nombre, string descripcion, string marca, int op)
         {
-            this.codigobarras = codigobarras;
-            this.nombre = nombre;
-            this.descripcion = descripcion;
-            this.marca = marca;
+            CodigoBarras = codigoBarras;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Marca = marca;
+            Op = op;
         }
 
-        public int codigobarras { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public string marca { get; set; }
+        public string CodigoBarras { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public string Marca { get; set; }
+        public int Op { get; set; }
     }
 }

@@ -52,11 +52,23 @@
     <Compile Include="FrmAddHerramientas.Designer.cs">
       <DependentUpon>FrmAddHerramientas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddProducto.Designer.cs">
+      <DependentUpon>FrmAddProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHerramientas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHerramientas.Designer.cs">
       <DependentUpon>FrmHerramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +77,14 @@
     <EmbeddedResource Include="FrmAddHerramientas.resx">
       <DependentUpon>FrmAddHerramientas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddProducto.resx">
+      <DependentUpon>FrmAddProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHerramientas.resx">
       <DependentUpon>FrmHerramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

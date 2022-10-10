@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionPermisos
 {
-    partial class FrmHerramientas
+    partial class FrmProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,10 @@ namespace PresentacionPermisos
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgHerramienta = new System.Windows.Forms.DataGridView();
+            this.dtgProductos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHerramienta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,20 +45,20 @@ namespace PresentacionPermisos
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnCerrar);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 46);
-            this.panel1.TabIndex = 25;
+            this.panel1.Size = new System.Drawing.Size(860, 47);
+            this.panel1.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(339, 8);
+            this.label2.Location = new System.Drawing.Point(361, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 32);
+            this.label2.Size = new System.Drawing.Size(137, 32);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Herramientas";
+            this.label2.Text = "Productos";
             // 
             // btnCerrar
             // 
@@ -74,66 +74,66 @@ namespace PresentacionPermisos
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(112, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(113, 58);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(687, 26);
-            this.txtBuscar.TabIndex = 23;
+            this.txtBuscar.TabIndex = 28;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 63);
+            this.label1.Location = new System.Drawing.Point(13, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 18);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Herramienta";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Productos";
             // 
-            // dtgHerramienta
+            // dtgProductos
             // 
-            this.dtgHerramienta.AllowUserToAddRows = false;
-            this.dtgHerramienta.AllowUserToDeleteRows = false;
-            this.dtgHerramienta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHerramienta.Location = new System.Drawing.Point(12, 96);
-            this.dtgHerramienta.Name = "dtgHerramienta";
-            this.dtgHerramienta.ReadOnly = true;
-            this.dtgHerramienta.Size = new System.Drawing.Size(834, 224);
-            this.dtgHerramienta.TabIndex = 24;
-            this.dtgHerramienta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHerramienta_CellClick);
-            this.dtgHerramienta.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHerramienta_CellEnter);
+            this.dtgProductos.AllowUserToAddRows = false;
+            this.dtgProductos.AllowUserToDeleteRows = false;
+            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductos.Location = new System.Drawing.Point(13, 94);
+            this.dtgProductos.Name = "dtgProductos";
+            this.dtgProductos.ReadOnly = true;
+            this.dtgProductos.Size = new System.Drawing.Size(834, 224);
+            this.dtgProductos.TabIndex = 29;
+            this.dtgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellClick);
+            this.dtgProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellEnter);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Location = new System.Drawing.Point(805, 54);
+            this.btnAgregar.Location = new System.Drawing.Point(806, 52);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(41, 36);
-            this.btnAgregar.TabIndex = 22;
+            this.btnAgregar.TabIndex = 27;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // FrmHerramientas
+            // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 334);
+            this.ClientSize = new System.Drawing.Size(857, 330);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtgHerramienta);
+            this.Controls.Add(this.dtgProductos);
             this.Controls.Add(this.btnAgregar);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FrmHerramientas";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmHerramientas";
-            this.Load += new System.EventHandler(this.FrmHerramientas_Load);
+            this.Text = "FrmProductos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHerramienta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +146,7 @@ namespace PresentacionPermisos
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dtgHerramienta;
+        private System.Windows.Forms.DataGridView dtgProductos;
         private System.Windows.Forms.Button btnAgregar;
     }
 }

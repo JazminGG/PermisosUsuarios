@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoHerramientas.cs" />
+    <Compile Include="AccesoProductos.cs" />
     <Compile Include="iEntidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,3 +41,5 @@ C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.csproj.CopyComplete
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.exe
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.pdb
+C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmAddProducto.resources
+C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmProductos.resources
