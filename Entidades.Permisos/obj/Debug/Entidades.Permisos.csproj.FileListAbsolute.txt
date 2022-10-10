@@ -1,0 +1,6 @@
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\bin\Debug\Entidades.Permisos.dll
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\bin\Debug\Entidades.Permisos.pdb
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\obj\Debug\Entidades.Permisos.csproj.AssemblyReference.cache
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\obj\Debug\Entidades.Permisos.csproj.CoreCompileInputs.cache
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\obj\Debug\Entidades.Permisos.dll
+C:\Users\jazmi\source\repos\PresentacionPermisos\Entidades.Permisos\obj\Debug\Entidades.Permisos.pdb
