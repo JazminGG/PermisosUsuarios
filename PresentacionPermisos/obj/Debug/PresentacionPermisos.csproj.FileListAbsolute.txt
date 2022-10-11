@@ -46,3 +46,4 @@ C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmAddUsuario.resources
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmUsuarios.resources
 C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmMenu.resources
+C:\Users\jazmi\source\repos\PresentacionPermisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.FrmLogin.resources

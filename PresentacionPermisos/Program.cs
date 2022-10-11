@@ -13,7 +13,7 @@ namespace PresentacionPermisos
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(new FrmMenu());
+            Application.Run(new FrmLogin());
         }
     }
 }
