@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Entidades.Permisos
 {
-    class Usuarios
+    public class Usuarios
     {
-        public Usuarios(int idusuario, string contrasena, string nombre, string apellidop, string apellidom, string fechanacimiento, string rfc)
+        public Usuarios(int idusuario, string nombre, string apellidop, string apellidom, string fechanac, string rfc, string contrasena)
         {
             this.idusuario = idusuario;
-            this.contrasena = contrasena;
             this.nombre = nombre;
             this.apellidop = apellidop;
             this.apellidom = apellidom;
-            this.fechanacimiento = fechanacimiento;
+            this.fechanac = fechanac;
             this.rfc = rfc;
+            this.contrasena = contrasena;
         }
 
         public int idusuario { get; set; }
-        public string contrasena { get; set; }
         public string nombre { get; set; }
         public string apellidop { get; set; }
         public string apellidom { get; set; }
-        public string fechanacimiento { get; set; }
+        public string fechanac { get; set; }
         public string rfc { get; set; }
+        public string contrasena { get; set; }
     }
 }

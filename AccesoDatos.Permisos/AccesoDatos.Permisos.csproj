@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="AccesoHerramientas.cs" />
     <Compile Include="AccesoProductos.cs" />
+    <Compile Include="AccesoUsuarios.cs" />
     <Compile Include="iEntidades.cs" />
+    <Compile Include="iUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
