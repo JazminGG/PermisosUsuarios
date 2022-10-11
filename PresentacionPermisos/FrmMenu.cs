@@ -39,5 +39,11 @@ namespace PresentacionPermisos
         {
             Close();
         }
+
+        private void btnAsignarPermisos_Click(object sender, EventArgs e)
+        {
+            FrmPermisosUsuarios pu = new FrmPermisosUsuarios();
+            pu.ShowDialog();
+        }
     }
 }

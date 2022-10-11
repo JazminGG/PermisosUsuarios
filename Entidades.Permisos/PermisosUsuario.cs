@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Entidades.Permisos
 {
-    class PermisosUsuario
+    public class PermisosUsuario
     {
-        public PermisosUsuario(int idpu, int fkidusuario, string modulo, bool pLectura, bool pEliminacion, bool pEscritura, bool pActualizacion)
+        public PermisosUsuario(int idPu, int fkidusuario, string modulo, bool permisoLectura, bool permisoEscritura, bool permisoEliminacion, bool permisoActualizacion)
         {
-            this.idpu = idpu;
-            this.fkidusuario = fkidusuario;
-            this.modulo = modulo;
-            PLectura = pLectura;
-            PEliminacion = pEliminacion;
-            PEscritura = pEscritura;
-            PActualizacion = pActualizacion;
+            IdPu = idPu;
+            Fkidusuario = fkidusuario;
+            Modulo = modulo;
+            PermisoLectura = permisoLectura;
+            PermisoEscritura = permisoEscritura;
+            PermisoEliminacion = permisoEliminacion;
+            PermisoActualizacion = permisoActualizacion;
         }
 
-        public int idpu { get; set; }
-        public int fkidusuario { get; set; }
-        public string modulo { get; set; }
-        public bool PLectura { get; set; }
-        public bool PEliminacion { get; set; }
-        public bool PEscritura { get; set; }
-        public bool PActualizacion { get; set; }
+        public int IdPu { get; set; }
+        public int Fkidusuario { get; set; }
+        public string Modulo { get; set; }
+        public bool PermisoLectura { get; set; }
+        public bool PermisoEscritura { get; set; }
+        public bool PermisoEliminacion { get; set; }
+        public bool PermisoActualizacion { get; set; }
     }
 }

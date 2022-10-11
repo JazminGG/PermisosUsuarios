@@ -113,6 +113,9 @@
     <EmbeddedResource Include="FrmAddHerramientas.resx">
       <DependentUpon>FrmAddHerramientas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddPermisosUsuarios.resx">
+      <DependentUpon>FrmAddPermisosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddProducto.resx">
       <DependentUpon>FrmAddProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermisosUsuarios.resx">
+      <DependentUpon>FrmPermisosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>

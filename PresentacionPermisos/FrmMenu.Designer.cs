@@ -71,6 +71,7 @@ namespace PresentacionPermisos
             this.btnAsignarPermisos.Name = "btnAsignarPermisos";
             this.btnAsignarPermisos.Size = new System.Drawing.Size(23, 22);
             this.btnAsignarPermisos.Text = "toolStripButton2";
+            this.btnAsignarPermisos.Click += new System.EventHandler(this.btnAsignarPermisos_Click);
             // 
             // btnAgregarHerramientas
             // 
@@ -111,7 +112,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
