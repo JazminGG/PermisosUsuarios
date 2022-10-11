@@ -26,7 +26,5 @@ namespace Entidades.Permisos
         public bool PEliminacion { get; set; }
         public bool PEscritura { get; set; }
         public bool PActualizacion { get; set; }
-
-
     }
 }

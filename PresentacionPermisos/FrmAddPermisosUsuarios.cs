@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,13 +10,11 @@ using System.Windows.Forms;
 
 namespace PresentacionPermisos
 {
-    public class Program
+    public partial class FrmAddPermisosUsuarios : Form
     {
-        [STAThread]
-        static void Main()
+        public FrmAddPermisosUsuarios()
         {
-            Application.EnableVisualStyles();
-            Application.Run(new FrmMenu());
+            InitializeComponent();
         }
     }
 }

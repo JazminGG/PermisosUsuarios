@@ -42,6 +42,18 @@ namespace Manejador.Permisos
             tabla.Columns.Insert(8, g.Boton("Borrar", Color.Red));
             tabla.Columns[0].Visible = true;
         }
+        /*public bool Comprobar(string usuario, string clave)
+        {
+            int c = Convert.ToInt32(au.Comprobar(usuario, clave).Tables[0].Rows[0]["EXISTE"]);
+            if (c == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }*/
 
     }
 }
