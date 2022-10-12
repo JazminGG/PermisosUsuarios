@@ -34,13 +34,13 @@ namespace PresentacionPermisos
             this.txtMedida = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,16 +83,6 @@ namespace PresentacionPermisos
             this.txtNombre.Size = new System.Drawing.Size(422, 26);
             this.txtNombre.TabIndex = 33;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(464, 136);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(82, 36);
-            this.btnGuardar.TabIndex = 29;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -104,7 +94,7 @@ namespace PresentacionPermisos
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Location = new System.Drawing.Point(0, -1);
@@ -121,19 +111,6 @@ namespace PresentacionPermisos
             this.label2.Size = new System.Drawing.Size(277, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Agregar Herramienta";
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Location = new System.Drawing.Point(521, 3);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(44, 44);
-            this.btnRegresar.TabIndex = 3;
-            this.btnRegresar.Text = "X";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // txtDescripcion
             // 
@@ -152,6 +129,29 @@ namespace PresentacionPermisos
             this.label6.TabIndex = 39;
             this.label6.Text = "Descripción";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Save;
+            this.btnGuardar.Location = new System.Drawing.Point(464, 136);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(60, 60);
+            this.btnGuardar.TabIndex = 29;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnRegresar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Cancel;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Location = new System.Drawing.Point(521, 3);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(40, 40);
+            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // FrmAddHerramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -169,7 +169,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAddHerramientas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddHerramientas";

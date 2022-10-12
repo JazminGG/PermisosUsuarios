@@ -38,11 +38,13 @@ namespace PresentacionPermisos
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(152, 105);
+            this.btnIngresar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnIngresar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Login;
+            this.btnIngresar.Location = new System.Drawing.Point(174, 111);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(100, 100);
+            this.btnIngresar.Size = new System.Drawing.Size(70, 70);
             this.btnIngresar.TabIndex = 9;
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtContrasena
@@ -82,6 +84,7 @@ namespace PresentacionPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(407, 216);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContrasena);
@@ -89,7 +92,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

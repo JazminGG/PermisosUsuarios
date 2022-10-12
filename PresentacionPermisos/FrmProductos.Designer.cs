@@ -42,7 +42,7 @@ namespace PresentacionPermisos
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
@@ -62,14 +62,15 @@ namespace PresentacionPermisos
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnCerrar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Cancel;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(807, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(807, 3);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(39, 36);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.TabIndex = 5;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // txtBuscar
@@ -105,12 +106,12 @@ namespace PresentacionPermisos
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.agregarr;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Location = new System.Drawing.Point(806, 52);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(41, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 27;
-            this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 

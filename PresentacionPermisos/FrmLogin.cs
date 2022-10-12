@@ -46,6 +46,8 @@ namespace PresentacionPermisos
             {
                 MessageBox.Show("Usuario o contraseña incorrecta, verifica tus datos.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txtUsuario.Text = "";
+            txtContrasena.Text = "";
         }
     }
 }

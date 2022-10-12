@@ -102,11 +102,11 @@ namespace PresentacionPermisos
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Save;
             this.btnGuardar.Location = new System.Drawing.Point(461, 129);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(82, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(60, 60);
             this.btnGuardar.TabIndex = 40;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -121,7 +121,7 @@ namespace PresentacionPermisos
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -141,14 +141,14 @@ namespace PresentacionPermisos
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnRegresar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnRegresar.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Cancel;
             this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Location = new System.Drawing.Point(521, 3);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(44, 44);
+            this.btnRegresar.Size = new System.Drawing.Size(40, 40);
             this.btnRegresar.TabIndex = 3;
-            this.btnRegresar.Text = "X";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 

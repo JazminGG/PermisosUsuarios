@@ -29,13 +29,12 @@ namespace PresentacionPermisos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnAgregarUsuarios = new System.Windows.Forms.ToolStripButton();
             this.btnAsignarPermisos = new System.Windows.Forms.ToolStripButton();
             this.btnAgregarHerramientas = new System.Windows.Forms.ToolStripButton();
             this.btnAgregarProductos = new System.Windows.Forms.ToolStripButton();
-            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,65 +48,71 @@ namespace PresentacionPermisos
             this.btnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(626, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(626, 63);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.AutoSize = false;
+            this.btnSalir.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Cerrar;
+            this.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(60, 60);
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // btnAgregarUsuarios
             // 
+            this.btnAgregarUsuarios.AutoSize = false;
+            this.btnAgregarUsuarios.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Usuario__2_;
             this.btnAgregarUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAgregarUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarUsuarios.Image")));
             this.btnAgregarUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarUsuarios.Name = "btnAgregarUsuarios";
-            this.btnAgregarUsuarios.Size = new System.Drawing.Size(23, 22);
+            this.btnAgregarUsuarios.Size = new System.Drawing.Size(60, 60);
             this.btnAgregarUsuarios.Text = "USUARIOS";
             this.btnAgregarUsuarios.Click += new System.EventHandler(this.btnAgregarUsuarios_Click);
             // 
             // btnAsignarPermisos
             // 
+            this.btnAsignarPermisos.AutoSize = false;
+            this.btnAsignarPermisos.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Permisos;
             this.btnAsignarPermisos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAsignarPermisos.Image = ((System.Drawing.Image)(resources.GetObject("btnAsignarPermisos.Image")));
             this.btnAsignarPermisos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAsignarPermisos.Name = "btnAsignarPermisos";
-            this.btnAsignarPermisos.Size = new System.Drawing.Size(23, 22);
+            this.btnAsignarPermisos.Size = new System.Drawing.Size(60, 60);
             this.btnAsignarPermisos.Text = "PERMISOS";
             this.btnAsignarPermisos.Click += new System.EventHandler(this.btnAsignarPermisos_Click);
             // 
             // btnAgregarHerramientas
             // 
+            this.btnAgregarHerramientas.AutoSize = false;
+            this.btnAgregarHerramientas.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Herramientas;
             this.btnAgregarHerramientas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAgregarHerramientas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarHerramientas.Image")));
             this.btnAgregarHerramientas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarHerramientas.Name = "btnAgregarHerramientas";
-            this.btnAgregarHerramientas.Size = new System.Drawing.Size(23, 22);
+            this.btnAgregarHerramientas.Size = new System.Drawing.Size(60, 60);
             this.btnAgregarHerramientas.Text = "HERRAMIENTAS";
             this.btnAgregarHerramientas.Click += new System.EventHandler(this.btnAgregarHerramientas_Click);
             // 
             // btnAgregarProductos
             // 
+            this.btnAgregarProductos.AutoSize = false;
+            this.btnAgregarProductos.BackgroundImage = global::PresentacionPermisos.Properties.Resources.Productos;
             this.btnAgregarProductos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAgregarProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProductos.Image")));
             this.btnAgregarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarProductos.Name = "btnAgregarProductos";
-            this.btnAgregarProductos.Size = new System.Drawing.Size(23, 22);
+            this.btnAgregarProductos.Size = new System.Drawing.Size(60, 60);
             this.btnAgregarProductos.Text = "PRODUCTOS";
             this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(23, 22);
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(626, 343);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
