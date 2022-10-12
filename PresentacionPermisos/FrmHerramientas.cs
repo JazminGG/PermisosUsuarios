@@ -15,6 +15,7 @@ namespace PresentacionPermisos
     public partial class FrmHerramientas : Form
     {
         ManejadorHerramienta mh;
+        ManejadorPermisos mp;
         public static Herramientas herramientas = new Herramientas(0, "", 0.0, "", "");
         int fila = 0, col = 0;
         public static int Opc;
@@ -22,6 +23,7 @@ namespace PresentacionPermisos
         {
             InitializeComponent();
             mh = new ManejadorHerramienta();
+            mp = new ManejadorPermisos();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -31,7 +33,21 @@ namespace PresentacionPermisos
 
         private void FrmHerramientas_Load(object sender, EventArgs e)
         {
-            Actualizar();
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEliminacionModificacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Lectura" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEliminacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEscritura" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEscrituraEliminacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaModificacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Administrador")
+            {
+
+                DialogResult rs = MessageBox.Show("¿Quiere cargar los registros actualmente existentes en la base de datos?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    Actualizar();
+                    Condicionantes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No cuentas con los permisos adecuados para acceder al formulario.", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
 
         private void dtgHerramienta_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -85,8 +101,74 @@ namespace PresentacionPermisos
         void Actualizar()
         {
             mh.Mostrar(dtgHerramienta, txtBuscar.Text);
+            Condicionantes();
         }
 
-        
+        public void Condicionantes()
+        {
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Lectura")
+            {
+                
+                btnAgregar.Visible = false;
+                dtgHerramienta.Columns[5].Visible = false;
+                dtgHerramienta.Columns[4].Visible = false;
+                
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Escritura")
+            {
+                btnAgregar.Visible = true;
+                dtgHerramienta.Columns[4].Visible = false;
+                dtgHerramienta.Columns[5].Visible = false;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Eliminacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEliminacion")
+            {
+                btnAgregar.Visible = false;
+                dtgHerramienta.Columns[4].Visible = false;
+                dtgHerramienta.Columns[5].Visible = true;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "Modificacion")
+            {
+                btnAgregar.Visible = false;
+                dtgHerramienta.Columns[4].Visible = true;
+                dtgHerramienta.Columns[5].Visible = false;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEscritura")
+            {
+                btnAgregar.Visible = true;
+                dtgHerramienta.Columns[4].Visible = false;
+                dtgHerramienta.Columns[5].Visible = false;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEscrituraEliminacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "EscrituraEliminacion")
+            {
+                btnAgregar.Visible = true;
+                dtgHerramienta.Columns[4].Visible = false;
+                dtgHerramienta.Columns[5].Visible = true;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "EscrituraModificacion")
+            {
+                btnAgregar.Visible = true;
+                dtgHerramienta.Columns[4].Visible = true;
+                dtgHerramienta.Columns[5].Visible = false;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "EliminacionModificacion")
+            {
+                btnAgregar.Visible = false;
+                dtgHerramienta.Columns[4].Visible = true;
+                dtgHerramienta.Columns[5].Visible = true;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "EscrituraEliminacionModificacion" || mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaModificacion")
+            {
+                btnAgregar.Visible = true;
+                dtgHerramienta.Columns[4].Visible = true;
+                dtgHerramienta.Columns[5].Visible = true;
+            }
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) == "LecturaEliminacionModificacion")
+            {
+                btnAgregar.Visible = false;
+                dtgHerramienta.Columns[4].Visible = true;
+                dtgHerramienta.Columns[5].Visible = true;
+            }
+        }
+
     }
 }

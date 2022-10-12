@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Manejador.Permisos;
 
 namespace PresentacionPermisos
 {
     public partial class FrmMenu : Form
     {
+        ManejadorPermisos mp;
         public FrmMenu()
         {
             InitializeComponent();
+            mp = new ManejadorPermisos();
         }
 
         private void btnAgregarUsuarios_Click(object sender, EventArgs e)
@@ -44,6 +47,16 @@ namespace PresentacionPermisos
         {
             FrmPermisosUsuarios pu = new FrmPermisosUsuarios();
             pu.ShowDialog();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+
+            if (mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Taller) != "Administrador" && mp.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) != "Administrador")
+            {
+                btnAgregarUsuarios.Visible = false;
+                btnAsignarPermisos.Visible = false;
+            }
         }
     }
 }

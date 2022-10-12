@@ -60,7 +60,7 @@ namespace PresentacionPermisos
             this.btnAgregarUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarUsuarios.Name = "btnAgregarUsuarios";
             this.btnAgregarUsuarios.Size = new System.Drawing.Size(23, 22);
-            this.btnAgregarUsuarios.Text = "toolStripButton1";
+            this.btnAgregarUsuarios.Text = "USUARIOS";
             this.btnAgregarUsuarios.Click += new System.EventHandler(this.btnAgregarUsuarios_Click);
             // 
             // btnAsignarPermisos
@@ -70,7 +70,7 @@ namespace PresentacionPermisos
             this.btnAsignarPermisos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAsignarPermisos.Name = "btnAsignarPermisos";
             this.btnAsignarPermisos.Size = new System.Drawing.Size(23, 22);
-            this.btnAsignarPermisos.Text = "toolStripButton2";
+            this.btnAsignarPermisos.Text = "PERMISOS";
             this.btnAsignarPermisos.Click += new System.EventHandler(this.btnAsignarPermisos_Click);
             // 
             // btnAgregarHerramientas
@@ -80,7 +80,7 @@ namespace PresentacionPermisos
             this.btnAgregarHerramientas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarHerramientas.Name = "btnAgregarHerramientas";
             this.btnAgregarHerramientas.Size = new System.Drawing.Size(23, 22);
-            this.btnAgregarHerramientas.Text = "toolStripButton3";
+            this.btnAgregarHerramientas.Text = "HERRAMIENTAS";
             this.btnAgregarHerramientas.Click += new System.EventHandler(this.btnAgregarHerramientas_Click);
             // 
             // btnAgregarProductos
@@ -90,7 +90,7 @@ namespace PresentacionPermisos
             this.btnAgregarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarProductos.Name = "btnAgregarProductos";
             this.btnAgregarProductos.Size = new System.Drawing.Size(23, 22);
-            this.btnAgregarProductos.Text = "toolStripButton4";
+            this.btnAgregarProductos.Text = "PRODUCTOS";
             this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
             // 
             // btnSalir
@@ -101,7 +101,7 @@ namespace PresentacionPermisos
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(23, 22);
-            this.btnSalir.Text = "toolStripButton5";
+            this.btnSalir.Text = "SALIR";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmMenu
@@ -116,6 +116,7 @@ namespace PresentacionPermisos
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

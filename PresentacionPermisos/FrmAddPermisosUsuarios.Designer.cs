@@ -60,8 +60,8 @@ namespace PresentacionPermisos
             // 
             this.cmbModulo.FormattingEnabled = true;
             this.cmbModulo.Items.AddRange(new object[] {
-            "Refacciones",
-            "Taller"});
+            "Herramientas",
+            "Productos"});
             this.cmbModulo.Location = new System.Drawing.Point(12, 135);
             this.cmbModulo.Name = "cmbModulo";
             this.cmbModulo.Size = new System.Drawing.Size(344, 26);
@@ -228,7 +228,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAddPermisosUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddPermisosUsuarios";

@@ -15,6 +15,7 @@ namespace PresentacionPermisos
     public partial class FrmProductos : Form
     {
         ManejadorProductos mp;
+        ManejadorPermisos mpe;
         public static Productos Productos = new Productos("", "", "", "", 0);
         int fila = 0, col = 0;
         public static string Opc;
@@ -22,11 +23,25 @@ namespace PresentacionPermisos
         {
             InitializeComponent();
             mp = new ManejadorProductos();
+            mpe = new ManejadorPermisos();
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            Actualizar();
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Lectura" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEliminacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEscritura" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEscrituraEliminacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaModificacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Administrador")
+            {
+                DialogResult rs = MessageBox.Show("¿Quiere cargar los registros actualmente existentes en la base de datos?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    Actualizar();
+                    Condicionantes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No cuentas con los permisos adecuados para acceder al formulario.", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
 
         private void dtgProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -78,11 +93,69 @@ namespace PresentacionPermisos
         void Actualizar()
         {
             mp.Mostrar(dtgProductos, txtBuscar.Text);
+            Condicionantes();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        public void Condicionantes()
+        {
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Lectura")
+            {
+                btnAgregar.Enabled = false;
+                dtgProductos.Columns[4].Visible = false;
+                dtgProductos.Columns[5].Visible = false;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Escritura")
+            {
+                btnAgregar.Enabled = true;
+                dtgProductos.Columns[4].Visible = false;
+                dtgProductos.Columns[5].Visible = false;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Eliminacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEliminacion")
+            {
+                btnAgregar.Enabled = false;
+                dtgProductos.Columns[4].Visible = false;
+                dtgProductos.Columns[5].Visible = true;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "Modificacion")
+            {
+                btnAgregar.Enabled = false;
+                dtgProductos.Columns[4].Visible = true;
+                dtgProductos.Columns[5].Visible = false;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEscritura")
+            {
+                btnAgregar.Enabled = true;
+                dtgProductos.Columns[4].Visible = false;
+                dtgProductos.Columns[5].Visible = false;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaEscrituraEliminacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "EscrituraEliminacion")
+            {
+                btnAgregar.Enabled = true;
+                dtgProductos.Columns[4].Visible = false;
+                dtgProductos.Columns[5].Visible = true;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "EscrituraModificacion")
+            {
+                btnAgregar.Enabled = true;
+                dtgProductos.Columns[4].Visible = true;
+                dtgProductos.Columns[5].Visible = false;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "EliminacionModificacion")
+            {
+                btnAgregar.Enabled = false;
+                dtgProductos.Columns[4].Visible = true;
+                dtgProductos.Columns[5].Visible = true;
+            }
+            if (mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "EscrituraEliminacionModificacion" || mpe.AsignacionPermisos(FrmLogin.usuario, FrmLogin.clave, FrmLogin.Refacciones) == "LecturaModificacion")
+            {
+                btnAgregar.Enabled = true;
+                dtgProductos.Columns[4].Visible = true;
+                dtgProductos.Columns[5].Visible = true;
+            }
         }
     }
 }

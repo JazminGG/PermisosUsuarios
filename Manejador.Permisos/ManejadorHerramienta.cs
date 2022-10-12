@@ -41,7 +41,6 @@ namespace Manejador.Permisos
             tabla.DataSource = ah.Mostrar(filtro).Tables["Herramientas"];
             tabla.Columns.Insert(5, g.Boton("Editar", Color.Green));
             tabla.Columns.Insert(6, g.Boton("Borrar", Color.Red));
-            tabla.Columns[0].Visible = true;
         }
     }
 }
